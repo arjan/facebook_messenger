@@ -54,7 +54,7 @@ defmodule FacebookMessenger.Sender do
 
   https://developers.facebook.com/docs/messenger-platform/send-api-reference/quick-replies
   """
-  @spec send(String.t(), String.t(), [map()]) :: HTTPotion.Response.t()
+  @spec send(String.t(), String.t(), [map()]) :: HTTPoison.Response.t()
   def send(recipient, message, quick_replies \\ nil) do
     payload = %{message: %{text: message}}
 
@@ -76,7 +76,7 @@ defmodule FacebookMessenger.Sender do
   * :recipient - the recipient to send the message to
   * :image_url - the url of the image to be sent
   """
-  @spec send_image(String.t(), String.t()) :: HTTPotion.Response.t()
+  @spec send_image(String.t(), String.t()) :: HTTPoison.Response.t()
   def send_image(recipient, image_url) do
     send_content(recipient, "image", image_url)
   end
@@ -88,7 +88,7 @@ defmodule FacebookMessenger.Sender do
   * :content_type - audio | file | image | video
   * :content_url - the url of the content
   """
-  @spec send_content(String.t(), String.t(), String.t()) :: HTTPotion.Response.t()
+  @spec send_content(String.t(), String.t(), String.t()) :: HTTPoison.Response.t()
   def send_content(recipient, content_type, content_url) do
     payload = %{url: content_url}
     send_attachment(recipient, content_type, payload)
@@ -100,7 +100,7 @@ defmodule FacebookMessenger.Sender do
   * :recipient - the recipient to send the message to
   * :template - the template payload
   """
-  @spec send_image(String.t(), Map.t()) :: HTTPotion.Response.t()
+  @spec send_image(String.t(), Map.t()) :: HTTPoison.Response.t()
   def send_template(recipient, template) do
     send_attachment(recipient, "template", template)
   end
@@ -112,7 +112,7 @@ defmodule FacebookMessenger.Sender do
   * :attachment - map with attachment information
 
   """
-  @spec send_attachment(String.t(), String.t(), Map.t()) :: HTTPotion.Response.t()
+  @spec send_attachment(String.t(), String.t(), Map.t()) :: HTTPoison.Response.t()
   def send_attachment(recipient, type, payload) do
     attachment = %{type: type, payload: payload}
     payload = %{message: %{attachment: attachment}}
