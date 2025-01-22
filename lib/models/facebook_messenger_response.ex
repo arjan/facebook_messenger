@@ -91,7 +91,7 @@ defmodule FacebookMessenger.Response do
         app_roles_parser()
 
       true ->
-        Logger.warn("Unsupported messaging entry: #{inspect(messaging)}")
+        Logger.warning("Unsupported messaging entry: #{inspect(messaging)}")
         %FacebookMessenger.Messaging{}
     end
   end

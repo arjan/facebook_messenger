@@ -51,7 +51,7 @@ defmodule FacebookMessenger do
   end
 
   def parse_message(params) do
-    Logger.warn("Webhook bad request with params #{inspect(params)}")
+    Logger.warning("Webhook bad request with params #{inspect(params)}")
     :error
   end
 
