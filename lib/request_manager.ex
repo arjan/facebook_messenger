@@ -4,7 +4,7 @@ defmodule FacebookMessenger.RequestManager do
   module respinsible to post a request to facebook
   """
   def post(url: url, body: body) do
-    HTTPotion.post(url,
+    HTTPoison.post(url,
       body: body,
       headers: ["Content-Type": "application/json"],
       timeout: @timeout
@@ -12,13 +12,13 @@ defmodule FacebookMessenger.RequestManager do
   end
 
   def get(url: url) do
-    HTTPotion.get(url,
+    HTTPoison.get(url,
       timeout: @timeout
     )
   end
 
   def delete(url: url, body: body) do
-    HTTPotion.delete(url,
+    HTTPoison.delete(url,
       body: body,
       headers: ["Content-Type": "application/json"],
       timeout: @timeout
