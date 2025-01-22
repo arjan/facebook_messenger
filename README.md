@@ -1,9 +1,7 @@
 # ExFacebookMessenger
-[![Build Status](https://travis-ci.org/oarrabi/facebook_messenger.svg?branch=master)](https://travis-ci.org/oarrabi/facebook_messenger)
+[![Build Status](https://github.com/arjan/facebook_messenger/actions/workflows/elixir.yml/badge.svg)](https://github.com/arjan/facebook_messenger/actions/workflows/elixir.yml)
 [![Hex.pm](https://img.shields.io/hexpm/v/facebook_messenger.svg)](https://hex.pm/packages/facebook_messenger)
 [![API Docs](https://img.shields.io/badge/api-docs-yellow.svg?style=flat)](http://hexdocs.pm/facebook_messenger/)
-[![Coverage Status](https://coveralls.io/repos/github/oarrabi/facebook_messenger/badge.svg?branch=master)](https://coveralls.io/github/oarrabi/facebook_messenger?branch=master)
-[![Inline docs](http://inch-ci.org/github/oarrabi/facebook_messenger.svg?branch=master)](http://inch-ci.org/github/oarrabi/facebook_messenger)
 
 ExFacebookMessenger is a library that helps you create facebook messenger bots easily.
 
